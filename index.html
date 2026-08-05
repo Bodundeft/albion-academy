@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Albion Academy — The best in everyone™</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Lora:ital,wght@1,500;1,600&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap Icons (for chevrons, play, etc.) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════
+       HEADER — sticky dark navy
+       No images needed in this section
+  ══════════════════════════════════════════════ -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+
+      <!-- Logo: tree SVG + wordmark -->
+      <a href="#" class="logo-link">
+        <div class="logo-tree">
+          <svg viewBox="0 0 100 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="44" y="78" width="12" height="28" rx="3" fill="white"/>
+            <path d="M38 100 Q30 106 20 104" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M62 100 Q70 106 80 104" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <circle cx="50" cy="44" r="32" stroke="white" stroke-width="3" fill="none"/>
+            <path d="M24 52 Q28 38 38 32 Q50 22 62 32 Q72 38 76 52" stroke="white" stroke-width="2.5" fill="none"/>
+            <circle cx="50" cy="38" r="5" fill="white"/>
+            <path d="M45 52 Q50 60 55 52" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <path d="M42 44 Q50 48 58 44" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="logo-words">
+          <span class="logo-name">The Albion Academy</span>
+          <span class="logo-tagline">The best in everyone™</span>
+          <span class="logo-ul">Part of United Learning</span>
+        </div>
+      </a>
+
+      <div class="header-right">
+        <!-- Google Translate placeholder -->
+        <a href="#" class="lang-btn">
+          <i class="bi bi-globe2"></i> Select Language
+        </a>
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Full navigation menu — desktop hidden via CSS, shown on mobile via JS -->
+    <nav class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Admissions</a>
+      <a href="#">Curriculum</a>
+      <a href="#">Parents</a>
+      <a href="#">Students</a>
+      <a href="#">News &amp; Guidance</a>
+      <a href="#">Contact Us</a>
+    </nav>
+
+    <!-- Desktop nav bar -->
+    <nav class="desktop-nav" id="desktopNav">
+      <div class="desktop-nav-inner">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Admissions</a>
+        <a href="#">Curriculum</a>
+        <a href="#">Parents</a>
+        <a href="#">Students</a>
+        <a href="#">News &amp; Guidance</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- ══════════════════════════════════════════════
+         HERO — SPLIT LAYOUT
+         Left: dark navy panel (no images)
+         Right: photo slider
+    ══════════════════════════════════════════════ -->
+    <section class="hero-split" id="hero">
+      <div class="hero-inner">
+
+        <!-- LEFT COLUMN — navy, static content, no images -->
+        <div class="hero-left">
+          <div class="hero-left-content">
+
+            <!-- Ofsted badge (SVG — no image file needed) -->
+            <div class="ofsted-badge">
+              <div class="ofsted-inner">
+                <div class="ofsted-logo">
+                  <span class="ofsted-o">O</span><span class="ofsted-fsted">fsted</span>
+                  <div class="ofsted-stars">★★★★</div>
+                </div>
+                <div class="ofsted-label">
+                  <strong>Good</strong>
+                  <span>Provider</span>
+                </div>
+              </div>
+            </div>
+
+            <h1 class="hero-heading">Welcome to The Albion Academy</h1>
+
+            <blockquote class="hero-mission">
+              Our mission is to be a school community who celebrate inclusivity and aspirational learning.
+            </blockquote>
+
+            <div class="hero-btns">
+              <a href="#" class="hero-btn hero-btn--dark">
+                <i class="bi bi-chevron-right"></i> Principal's welcome
+              </a>
+              <a href="#" class="hero-btn hero-btn--ghost">
+                <i class="bi bi-play-circle"></i> Welcome video
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN — HERO PHOTO SLIDER
+        ════════════════════════════════════════════
+        HOW TO CHANGE SLIDER IMAGES:
+        1. Save your photos inside the images/ folder
+           e.g. images/hero-1.jpg, images/hero-2.jpg
+        2. Each slide has ONE img tag.
+           Change src="" to your file path.
+        3. Update alt="" text to describe the photo.
+        4. Update the h2 headline and p text to
+           match the slide topic.
+
+        TO ADD A SLIDE: copy any hero-slide div block
+        and paste it before the closing div of heroTrack.
+
+        TO REMOVE A SLIDE: delete the entire hero-slide div block.
+        ════════════════════════════════════════════ -->
+        <div class="hero-right">
+          <div class="hero-slider-wrap">
+
+            <div class="hero-track" id="heroTrack">
+
+              <!-- ▼ SLIDE 1 — replace src with your image ▼ -->
+              <div class="hero-slide">
+                <img src="images/GCSE RESULTS DAY 2025 ADS AND POSTS FOR DAY.png" alt="GCSE Results Day 2025" />
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                  <div class="slide-content-inner">
+                    <h2>Information for Year 11</h2>
+                    <p>Get up to date information on mock and GCSE timetables.</p>
+                    <a href="#" class="slide-btn">
+                      <i class="bi bi-chevron-right"></i> Click Here
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ▼ SLIDE 2 — replace src with your image ▼ -->
+              <div class="hero-slide">
+                <img src="images/AlbionSmall-144.jpg" alt="Year 6 Transition" />
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                  <div class="slide-content-inner">
+                    <h2>Is Your Child Starting in September 2026?</h2>
+                    <p>Find out about 'Next Steps' and our forthcoming transition events here.</p>
+                    <a href="#" class="slide-btn">
+                      <i class="bi bi-chevron-right"></i> Click Here
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ▼ SLIDE 3 — replace src with your image ▼ -->
+              <div class="hero-slide">
+                <img src="images/1.webp" alt="Students in classroom" />
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                  <div class="slide-content-inner">
+                    <!-- No overlay text for this slide — leave blank or add below -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- ▼ SLIDE 4 — replace src with your image ▼ -->
+              <div class="hero-slide">
+                <img src="images/Albion1.png" alt="School community" />
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                  <div class="slide-content-inner"></div>
+                </div>
+              </div>
+
+              <!-- ▼ SLIDE 5 — replace src with your image ▼ -->
+              <div class="hero-slide">
+                <img src="images/Albion2.png" alt="Learning at Albion" />
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                  <div class="slide-content-inner"></div>
+                </div>
+              </div>
+
+              <!-- ▼ SLIDE 6 — replace src with your image ▼ -->
+              <div class="hero-slide">
+                <img src="images/albion.png" alt="Students working together" />
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                  <div class="slide-content-inner"></div>
+                </div>
+              </div>
+
+              <!-- ▼ SLIDE 7 — replace src with your image ▼ -->
+              <div class="hero-slide">
+                <img src="images/AlbionLarge-307.jpg" alt="Albion Academy students" />
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                  <div class="slide-content-inner"></div>
+                </div>
+              </div>
+
+              <!--
+              ▼ TO ADD MORE SLIDES copy and uncomment this block:
+
+              <div class="hero-slide">
+                <img src="images/hero-slide-8.jpg" alt="Describe your photo" />
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                  <div class="slide-content-inner">
+                    <h2>Your Headline Here</h2>
+                    <p>Your caption text here.</p>
+                    <a href="#" class="slide-btn">
+                      <i class="bi bi-chevron-right"></i> Click Here
+                    </a>
+                  </div>
+                </div>
+              </div>
+              -->
+
+            </div><!-- end #heroTrack -->
+
+            <!-- Prev / Next arrows -->
+            <button class="hero-arrow hero-arrow--prev" id="heroPrev" aria-label="Previous slide">&#8249;</button>
+            <button class="hero-arrow hero-arrow--next" id="heroNext" aria-label="Next slide">&#8250;</button>
+
+            <!-- Dots — auto-generated by script.js -->
+            <div class="hero-dots" id="heroDots"></div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Hero -->
+
+
+    <!-- ══════════════════════════════════════════════
+         SERVICES / ICON GRID — 3×2
+         No images in this section — Bootstrap Icons only
+    ══════════════════════════════════════════════ -->
+    <section class="services-section" id="services">
+      <div class="services-container">
+        <div class="services-grid">
+
+          <a href="#" class="service-item">
+            <div class="service-icon text-warning">
+              <i class="bi bi-person-fill"></i>
+            </div>
+            <div class="service-body">
+              <h3>Principal's Welcome</h3>
+              <p>We believe that every child has a talent and can experience success as they develop into young adults through the supportive and caring environment we provide.</p>
+            </div>
+          </a>
+
+          <a href="#" class="service-item">
+            <div class="service-icon text-success">
+              <i class="bi bi-heart-fill"></i>
+            </div>
+            <div class="service-body">
+              <h3>Ethos and Values</h3>
+              <p>Our Mission — We are a school community who celebrate inclusivity, ambition and aspirational learners.</p>
+            </div>
+          </a>
+
+          <a href="#" class="service-item">
+            <div class="service-icon text-danger">
+              <i class="bi bi-building"></i>
+            </div>
+            <div class="service-body">
+              <h3>Admissions</h3>
+              <p>We are delighted that you are considering The Albion Academy for your child. Click here to find out more about our admissions process.</p>
+            </div>
+          </a>
+
+          <a href="#" class="service-item">
+            <div class="service-icon text-info">
+              <i class="bi bi-boxes"></i>
+            </div>
+            <div class="service-body">
+              <h3>Curriculum</h3>
+              <p>Our aim is to provide an excellent education for all our students; an education which brings out the best in all of them and prepares them for success in life.</p>
+            </div>
+          </a>
+
+          <a href="#" class="service-item">
+            <div class="service-icon text-primary">
+              <i class="bi bi-mortarboard-fill"></i>
+            </div>
+            <div class="service-body">
+              <h3>Work with Us</h3>
+              <p>We are a happy school with an aspirational culture that encourages everyone — students and staff alike to achieve their best.</p>
+            </div>
+          </a>
+
+          <a href="#" class="service-item">
+            <div class="service-icon text-secondary">
+              <i class="bi bi-calendar-date"></i>
+            </div>
+            <div class="service-body">
+              <h3>Term Dates</h3>
+              <p>View and download our Term Dates.</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section><!-- End Services -->
+
+
+    <!-- ══════════════════════════════════════════════
+         CONTACT / CALL-TO-ACTION BANNER
+    ──────────────────────────────────────────────
+    HOW TO CHANGE THIS BACKGROUND IMAGE:
+    · Replace src="images/contact-banner.jpg" below
+      with any photo from your images/ folder.
+    · Recommended: a wide landscape shot of the school
+      building or students outside.
+    ══════════════════════════════════════════════ -->
+    <section class="cta-section" id="contact-cta">
+
+      <!-- ▼ CTA BACKGROUND IMAGE — replace src with your image ▼ -->
+      <img
+        src="images/DSC_6811.jpg"
+        alt="The Albion Academy school"
+        class="cta-bg-img"
+      />
+      <!-- Change to: src="images/YOUR-BUILDING-PHOTO.jpg" -->
+
+      <div class="cta-overlay"></div>
+      <div class="cta-content">
+        <h2>Contact Us</h2>
+        <p>1 London Street, Salford, M6 6QT</p>
+        <a href="#" class="cta-btn">Talk with The Albion Academy</a>
+      </div>
+    </section><!-- End CTA -->
+
+
+    <!-- ══════════════════════════════════════════════
+         FIND OUT MORE — 2×2 icon grid
+         No images — icons only
+    ══════════════════════════════════════════════ -->
+    <section class="find-out-section" id="find-out">
+      <div class="fo-container">
+
+        <h2 class="fo-heading">Find out more about The Albion Academy</h2>
+        <p class="fo-sub">
+          We want you and your child to experience what makes The Albion Academy unique.
+          The best way is to either attend an open event or visit us on a school tour.
+          However, if you can't visit us in person,
+          <a href="#" class="fo-link">watch our video</a>.
+        </p>
+
+        <div class="fo-grid">
+
+          <a href="#" class="fo-item">
+            <div class="fo-icon fo-icon--gold">
+              <i class="bi bi-award-fill"></i>
+            </div>
+            <div class="fo-body">
+              <h3>Read our Ofsted Report</h3>
+              <p>We are proud to be Ofsted-rated Good!</p>
+            </div>
+          </a>
+
+          <a href="#" class="fo-item">
+            <div class="fo-icon fo-icon--red">
+              <i class="bi bi-people-fill"></i>
+            </div>
+            <div class="fo-body">
+              <h3>Book a school tour</h3>
+              <p>If you would like to find out more about us and have a look around The Albion Academy, we would be delighted to offer you a school tour during or after the school day.</p>
+            </div>
+          </a>
+
+          <a href="#" class="fo-item">
+            <div class="fo-icon fo-icon--blue">
+              <i class="bi bi-newspaper"></i>
+            </div>
+            <div class="fo-body">
+              <h3>Read our newsletters</h3>
+              <p>Here you will find the latest updates and news about our school community. Stay informed about upcoming events and student achievements.</p>
+            </div>
+          </a>
+
+          <a href="#" class="fo-item">
+            <div class="fo-icon fo-icon--teal">
+              <i class="bi bi-book-fill"></i>
+            </div>
+            <div class="fo-body">
+              <h3>View our prospectus</h3>
+              <p>Find out more about what your child can expect at The Albion Academy from our outstanding curriculum to our vibrant personal development offer.</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section><!-- End Find Out More -->
+
+
+    <!-- ══════════════════════════════════════════════
+         TESTIMONIALS SLIDER — text only, no images
+    ══════════════════════════════════════════════ -->
+    <section class="testi-section" id="testimonials">
+      <div class="testi-container">
+
+        <div class="testi-track" id="testiTrack">
+
+          <!-- ▼ TESTIMONIAL 1 — edit text here ▼ -->
+          <div class="testi-slide active">
+            <div class="testi-quote">&ldquo;</div>
+            <blockquote>
+              The Albion Academy is a high quality school, and I am very happy that my child is studying there.
+            </blockquote>
+            <cite>— Parent · UL Parent Survey 2024</cite>
+          </div>
+
+          <!-- ▼ TESTIMONIAL 2 — edit text here ▼ -->
+          <div class="testi-slide">
+            <div class="testi-quote">&ldquo;</div>
+            <blockquote>
+              My daughter is fairly new to the school and I am happy with the feedback she gives me. I love the encouragement that the teachers give to her, especially her English Teacher. She's always motivated and strives to do better.
+            </blockquote>
+            <cite>— Parent · UL Parent Survey 2024</cite>
+          </div>
+
+          <!-- ▼ TESTIMONIAL 3 — edit text here ▼ -->
+          <div class="testi-slide">
+            <div class="testi-quote">&ldquo;</div>
+            <blockquote>
+              The Albion Academy is an excellent school for children, the principal, teachers and staff are top notch. My sons are doing very well, and others that I know.
+            </blockquote>
+            <cite>— Parent · UL Parent Survey 2024</cite>
+          </div>
+
+          <!-- ▼ TESTIMONIAL 4 — edit text here ▼ -->
+          <div class="testi-slide">
+            <div class="testi-quote">&ldquo;</div>
+            <blockquote>
+              I think the Albion is a brilliant school, my child has become very independent since starting in September.
+            </blockquote>
+            <cite>— Parent · UL Parent Survey 2024</cite>
+          </div>
+
+          <!--
+          ▼ TO ADD MORE TESTIMONIALS copy and uncomment this block:
+
+          <div class="testi-slide">
+            <div class="testi-quote">&ldquo;</div>
+            <blockquote>Your testimonial text here.</blockquote>
+            <cite>— Source name here</cite>
+          </div>
+          -->
+
+        </div><!-- end testi-track -->
+
+        <!-- Prev / Next arrows -->
+        <div class="testi-arrows">
+          <button class="testi-arrow" id="testiPrev" aria-label="Previous testimonial">&#8249;</button>
+          <button class="testi-arrow" id="testiNext" aria-label="Next testimonial">&#8250;</button>
+        </div>
+
+        <!-- Dots — auto-generated by script.js -->
+        <div class="testi-dots" id="testiDots"></div>
+
+      </div>
+    </section><!-- End Testimonials -->
+
+
+    <!-- ══════════════════════════════════════════════
+         MAP — OpenStreetMap embed
+         To change location, update the bbox and marker
+         values in the iframe src URL
+    ══════════════════════════════════════════════ -->
+    <div class="map-section">
+      <iframe
+        title="The Albion Academy — 1 London Street, Salford, M6 6QT"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-2.3080%2C53.4850%2C-2.2900%2C53.4920&layer=mapnik&marker=53.4885%2C-2.2990"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+  </main>
+
+
+  <!-- ══════════════════════════════════════════════
+       FOOTER — dark navy, no images
+  ══════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <!-- Contact column -->
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <address>
+          <p>1 London Street<br />Salford<br />M6 6QT</p>
+          <p><strong>Headteacher:</strong> Mathew Rogers</p>
+          <p><strong>SENDCO:</strong> Mrs S O'Riordan</p>
+          <p><strong>Chair of Governors:</strong> Jo Egerton (Acting)</p>
+          <p><a href="tel:01613595100">0161 359 5100</a></p>
+          <p><a href="#" class="footer-cta-link">Talk with The Albion Academy →</a></p>
+        </address>
+        <div class="footer-socials">
+          <a href="#" class="fsoc" aria-label="Facebook">f</a>
+          <a href="#" class="fsoc" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="fsoc" aria-label="Twitter / X">𝕏</a>
+          <a href="#" class="fsoc" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+
+      <!-- Useful Links column -->
+      <div class="footer-col">
+        <h3>Useful Links</h3>
+        <ul class="footer-links">
+          <li><a href="#">Admissions</a></li>
+          <li><a href="#">Policies</a></li>
+          <li><a href="#">Governance</a></li>
+          <li><a href="#">SEND</a></li>
+          <li><a href="#">Ofsted</a></li>
+          <li><a href="#">Safeguarding</a></li>
+          <li><a href="#">United Learning</a></li>
+        </ul>
+      </div>
+
+      <!-- Badge column -->
+      <div class="footer-col footer-badge-col">
+        <div class="pf-badge">
+          <div class="pf-badge-inner">
+            <span class="pf-heart">❤️</span>
+            <span class="pf-text">Parent<br />Friendly<br />School</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end footer-inner -->
+
+    <div class="footer-bottom">
+      <p>
+        Copyright &copy; 2026 The Albion Academy &nbsp;|&nbsp;
+        <a href="#">Teacher Training</a> &nbsp;|&nbsp;
+        <a href="#">Back to top ↑</a>
+      </p>
+      <p class="footer-legal">
+        United Learning Ltd (Registered in England No: 00018582. Charity No. 313999)
+        UCST (Registered in England No: 2780748. Charity No. 1016538) and ULT
+        (Registered in England No. 4439859. An Exempt Charity). Companies limited by guarantee.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
